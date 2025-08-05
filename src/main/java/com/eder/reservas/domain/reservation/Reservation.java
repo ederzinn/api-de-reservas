@@ -1,5 +1,6 @@
 package com.eder.reservas.domain.reservation;
 
+import com.eder.reservas.domain.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,8 +10,10 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+import com.eder.reservas.domain.table.Table;
+
 @Entity
-@Table(name = "reservations")
+@jakarta.persistence.Table(name = "reservations")
 @Setter
 @Getter
 @NoArgsConstructor
@@ -21,9 +24,11 @@ public class Reservation {
     private UUID id;
 
     @ManyToOne
-    private UUID user_id;
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
     @ManyToOne
-    private UUID table_id;
+    @JoinColumn(name = "table_id", nullable = false)
+    private Table table;
 
     private LocalDateTime reservation_date_time;
     private ReservationStatus status;
