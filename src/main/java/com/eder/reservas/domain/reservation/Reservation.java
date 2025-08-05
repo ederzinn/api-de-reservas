@@ -25,6 +25,6 @@ public class Reservation {
     @ManyToOne
     private UUID table_id;
 
-    private LocalDateTime reservationDateTime;
+    private LocalDateTime reservation_date_time;
     private ReservationStatus status;
 }
