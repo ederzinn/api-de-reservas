@@ -1,9 +1,9 @@
 package com.eder.reservas.services;
 
 import com.eder.reservas.domain.user.User;
-import com.eder.reservas.dtos.LoginDTO;
-import com.eder.reservas.dtos.RegisterDTO;
-import com.eder.reservas.dtos.ResponseDTO;
+import com.eder.reservas.dtos.auth.LoginDTO;
+import com.eder.reservas.dtos.auth.RegisterDTO;
+import com.eder.reservas.dtos.auth.ResponseDTO;
 import com.eder.reservas.infra.security.TokenService;
 import com.eder.reservas.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;

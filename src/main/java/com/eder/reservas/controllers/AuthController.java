@@ -1,8 +1,8 @@
 package com.eder.reservas.controllers;
 
-import com.eder.reservas.dtos.LoginDTO;
-import com.eder.reservas.dtos.RegisterDTO;
-import com.eder.reservas.dtos.ResponseDTO;
+import com.eder.reservas.dtos.auth.LoginDTO;
+import com.eder.reservas.dtos.auth.RegisterDTO;
+import com.eder.reservas.dtos.auth.ResponseDTO;
 import com.eder.reservas.services.AuthService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
