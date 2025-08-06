@@ -1,5 +1,6 @@
 package com.eder.reservas.domain.table;
 
+import com.eder.reservas.dtos.table.TableRegisterDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -24,4 +25,10 @@ public class Table {
 
     @Enumerated(EnumType.STRING)
     private TableStatus status;
+
+    public Table(TableRegisterDTO data) {
+        this.number = data.number();
+        this.capacity = data.capacity();
+        this.status = data.status();
+    }
 }
