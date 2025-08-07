@@ -31,6 +31,7 @@ public class Reservation {
     private Table table;
 
     private LocalDateTime reservation_date_time;
+    private int number_of_people;
 
     @Enumerated(EnumType.STRING)
     private ReservationStatus status;
